@@ -10,14 +10,15 @@ Firstly you have to call setup function:
         BestChoiceAB.setup(context, new MixPanelClient(context)); //MixPanelClient is client where you collect data about test which implements BestChoiceABClient
 Here's how you might use it for simple A/B testing:
 
-        BestChoiceAB.test("firstScreenLogo", new BestChoiceABTest() {
-            public void A() {
-                // Display new old logo
+        BestChoiceAB.test("testLogo", new BestChoiceABTest() {
+            public void oldLogo() {
+                Log.i("Test", "method oldlogo");
             }
 
-            public void B() {
-                // Display old logo
+            public void newLogo() {
+                Log.i("Test", "method newLogo");
             }
+
         });
 
 
