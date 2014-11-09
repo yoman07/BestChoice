@@ -2,12 +2,13 @@ package com.zdobywacz.ab;
 
 import android.content.Context;
 import android.util.Log;
-import org.json.JSONArray;
+
+import com.zdobywacz.ab.classes.BestChoiceABClient;
+import com.zdobywacz.ab.classes.BestChoiceABTest;
+import com.zdobywacz.ab.classes.BestChoiceStats;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 /**
@@ -38,7 +39,7 @@ public class BestChoiceAB {
         }
 
         try {
-            m[choice].invoke(testInstance, null);
+            m[choice].invoke(testInstance);
         } catch (IllegalAccessException e) {
             Log.e(TAG,"Problem with call method - IllegalAccessException");
             e.printStackTrace();

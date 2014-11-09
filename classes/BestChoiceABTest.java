@@ -1,4 +1,4 @@
-package com.zdobywacz.ab;
+package com.zdobywacz.ab.classes;
 
 /**
  * Created by yoman on 08.11.14.
