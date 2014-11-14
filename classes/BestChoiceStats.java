@@ -58,4 +58,12 @@ public class BestChoiceStats extends SQLiteOpenHelper {
         db.close();
     }
 
+    /**
+     * Use it f.e. for debug
+     */
+    public void cleanCachedChoice() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DELETE FROM abcache");
+    }
+
 }

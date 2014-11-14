@@ -54,7 +54,11 @@ public class BestChoiceAB {
     }
 
     private static int randomTest(int numberOfElements) {
-        return random.nextInt(numberOfElements - 1);
+        return random.nextInt(numberOfElements);
+    }
+
+    public static void resetTests() {
+        stats.cleanCachedChoice();
     }
 
 }
